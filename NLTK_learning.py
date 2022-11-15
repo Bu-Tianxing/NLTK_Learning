@@ -63,7 +63,7 @@ def lemmatized_words(tagged_words):  # 词形还原
     lemmas = []
     for word_tag in tagged_words:
         wordnet_pos = get_wordnet_pos(word_tag[1]) or wordnet.NOUN
-        lemmas.append(lemmatizer.lemmatize(word_tag[0], pos=wordnet_pos))  # 词形还原
+        lemmas.append(lemmatizer.lemmatize(word_tag[0], pos=wordnet_pos))
     return lemmas
 
     # 生成词云
